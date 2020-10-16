@@ -25,7 +25,7 @@ const App = () => {
 
   const nextId = useRef(4);
 
-  const onInsert=useCallback(
+  const onInsert = useCallback(
     text => {
       const todo = {
         id: nextId.current,
@@ -33,13 +33,13 @@ const App = () => {
         checked: false,
       };
       setTodos(todos.concat(todo));
-      nextId.current += 1;
-    }, 
+      nextId.current += 1; // nextId 1씩 더하기
+    },
     [todos],
-  )
+  );
   return (
     <TodoTemplate>
-      <TodoInsert onInsert={onInsert}/>
+      <TodoInsert onInsert={onInsert} />
       <TodoList todos={todos} />
     </TodoTemplate>
   )

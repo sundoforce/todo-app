@@ -2,15 +2,18 @@ import React, { useState, useCallback } from 'react';
 import { MdAdd } from 'react-icons/md';
 import './TodoInsert.scss';
 
-const TodoInsert = ( onInsert ) => {
+const TodoInsert = ( { onInsert } ) => {
     const [value, setValue ] = useState('');
+
+
 
     const onChange = useCallback(e => {
         setValue(e.target.value);
     }, [])
 
-const onSubmit = useCallback(
-    e => {
+    const onSubmit = useCallback(
+        e => {
+        debugger;
         onInsert(value);
         setValue('');
         e.preventDefault();
