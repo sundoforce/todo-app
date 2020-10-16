@@ -13,7 +13,6 @@ const TodoInsert = ( { onInsert } ) => {
 
     const onSubmit = useCallback(
         e => {
-        debugger;
         onInsert(value);
         setValue('');
         e.preventDefault();

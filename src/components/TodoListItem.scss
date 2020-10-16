@@ -11,14 +11,24 @@
     display: flex;
     align-items: center;
     svg {
+      // 아이콘
       font-size: 1.5rem;
     }
     .text {
       margin-left: 0.5rem;
-      text-decoration: line-through;
+      flex: 1; // 차지할 수 있는 영역 모두 차지
+    }
+    // 체크되었을
+    &.checked {
+      svg {
+        font-size: 1.5rem;
+      }
+      .text {
+        margin-left: 0.5rem;
+        text-decoration: line-through;
+      }
     }
   }
-
   .remove {
     display: flex;
     align-items: center;

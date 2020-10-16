@@ -10,7 +10,7 @@
     font-size: 1.125rem;
     line-height: 1.5;
     color: white;
-    &::placeholder {
+    &:placeholder {
       color: #dee2e6;
     }
     // 버튼을 제외한 영역을 모두 차지하기
@@ -27,7 +27,6 @@
     padding-right: 1rem;
     font-size: 1.5rem;
     display: flex;
-    align-items: center;
     cursor: pointer;
     transition: 0.1s background ease-in;
     &:hover {
